@@ -184,14 +184,14 @@
 
         <ul class="capability-list">
           <li class="reveal" style="--rd:200ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Financial strategy and operating model support.</strong>
               <p>Aligning the finance function to the agency's portfolio, accountabilities and Estimates rhythm.</p>
             </div>
           </li>
           <li class="reveal" style="--rd:280ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Cost transparency and decision-support models.</strong>
               <p>Activity-based cost models, scenario tools and unit-economics views that survive contact with executive questions.</p>
@@ -215,14 +215,14 @@
 
         <ul class="capability-list">
           <li class="reveal" style="--rd:200ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Budgeting, forecasting and performance reporting.</strong>
               <p>End-to-end budgeting frameworks, rolling forecasts and performance reporting fit for portfolio scale.</p>
             </div>
           </li>
           <li class="reveal" style="--rd:280ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Executive reporting and stakeholder engagement.</strong>
               <p>Clear, trusted reporting that bridges finance, delivery and policy — and works in the brief, the board and the committee.</p>
@@ -246,14 +246,14 @@
 
         <ul class="capability-list">
           <li class="reveal" style="--rd:200ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Assurance, governance and financial improvement initiatives.</strong>
               <p>Independent review, control improvement and the design of governance that the second line and Audit Committee can trust.</p>
             </div>
           </li>
           <li class="reveal" style="--rd:280ms">
-            <span class="cap-bullet">↗</span>
+            <span class="cap-bullet" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             <div>
               <strong>Capability transfer to client teams.</strong>
               <p>Every engagement is structured to leave the client's people more capable than we found them.</p>
@@ -845,10 +845,14 @@
   align-items: start;
 }
 .cap-bullet {
-  font-family: var(--sans);
-  font-size: 16px;
-  color: var(--yellow-deep);
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
   padding-top: 4px;
+  color: var(--yellow-deep);
+}
+.cap-bullet svg {
+  display: block;
 }
 .capability-list strong {
   font-family: var(--serif);

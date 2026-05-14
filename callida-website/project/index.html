@@ -100,7 +100,7 @@
             <span class="service-name">CFO Advisory</span>
             <span class="service-desc">Financial strategy, assurance and reporting for public sector leaders.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="service-row reveal" style="--rd:60ms">
@@ -109,7 +109,7 @@
             <span class="service-name">Strategy &amp; Operations</span>
             <span class="service-desc">Operating model, organisational design and program rebaselining.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="service-row reveal" style="--rd:120ms">
@@ -118,7 +118,7 @@
             <span class="service-name">Digital &amp; Systems</span>
             <span class="service-desc">System design, data and integration across core platforms.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="service-row reveal" style="--rd:180ms">
@@ -127,7 +127,7 @@
             <span class="service-name">Procurement &amp; Commercial</span>
             <span class="service-desc">Sourcing, supplier strategy and value-for-money assurance.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="service-row reveal" style="--rd:240ms">
@@ -136,7 +136,7 @@
             <span class="service-name">Policy &amp; Programs</span>
             <span class="service-desc">Evidence, design and delivery support for policy reform.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
       <li class="service-row reveal" style="--rd:300ms">
@@ -145,7 +145,7 @@
             <span class="service-name">Assurance &amp; Governance</span>
             <span class="service-desc">Independent assurance, risk and governance review.</span>
           </div>
-          <span class="service-arrow" aria-hidden="true">↗</span>
+          <span class="service-arrow" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 19L19 5M19 5h-6M19 5v6" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </li>
     </ol>
@@ -543,11 +543,16 @@
   max-width: 50ch;
 }
 .service-arrow {
-  font-family: var(--sans);
-  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 32px;
   color: var(--on-dark-mute);
-  text-align: right;
   transition: color 200ms var(--ease), transform 300ms var(--ease);
+}
+.service-arrow svg {
+  display: block;
 }
 .service-link:hover .service-arrow { color: var(--yellow); transform: translate(4px, -4px); }
 
