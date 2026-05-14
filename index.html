@@ -1125,7 +1125,24 @@ body.modal-open .nav {
 @media (max-width: 960px) {
   .case-modal-grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    align-content: start;
     overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .case-modal-left,
+  .case-modal-right {
+    overflow: visible;
+    min-height: auto;
+  }
+  .case-modal-cols {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+  .case-modal-right {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
   }
 }
 .case-modal-left {
@@ -1145,12 +1162,6 @@ body.modal-open .nav {
   border-left: 1px solid var(--rule);
   min-height: 0;
   overflow-y: auto;
-}
-@media (max-width: 960px) {
-  .case-modal-right {
-    border-left: 0;
-    border-top: 1px solid var(--rule);
-  }
 }
 .case-modal-head {
   display: grid;
@@ -1279,6 +1290,11 @@ body.modal-open .nav {
 }
 .case-modal-cap-link a:hover {
   color: var(--on-dark);
+}
+@media (max-width: 960px) {
+  .case-modal-cap-link {
+    margin-top: clamp(24px, 4vw, 40px);
+  }
 }
 .case-modal-team-title {
   font-family: var(--serif);
