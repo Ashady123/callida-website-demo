@@ -1,0 +1,393 @@
+/* Capability template v2 — paper-first top band, no hero photography.
+   Loads after styles.css. Design tokens only. */
+
+/* ─── Nav: always readable on paper (no dark hero) ─── */
+.page-capability .nav {
+  background: rgba(248, 246, 241, 0.94);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+}
+.page-capability .nav.scrolled {
+  background: rgba(248, 246, 241, 0.98);
+}
+
+/* ─── Section rhythm ─── */
+.page-capability .section {
+  padding-top: clamp(88px, 9vw, 128px);
+  padding-bottom: clamp(88px, 9vw, 128px);
+}
+
+.page-capability .section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+  margin-bottom: clamp(56px, 6vw, 88px);
+}
+
+@media (max-width: 880px) {
+  .page-capability .section-head {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+/* ─── Top band: summary | people ─── */
+.cap-top {
+  background: var(--paper);
+  padding-top: clamp(104px, 12vw, 140px);
+}
+
+.cap-top-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+@media (max-width: 880px) {
+  .cap-top-inner {
+    grid-template-columns: 1fr;
+    gap: clamp(48px, 6vw, 64px);
+  }
+}
+
+.cap-top-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(44px, 6.5vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 0 0 clamp(20px, 2.5vw, 28px);
+  text-wrap: balance;
+  max-width: 18ch;
+}
+
+.cap-top-lede {
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 clamp(28px, 3.5vw, 40px);
+  max-width: 48ch;
+}
+
+.cap-top-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.page-capability .italic-serif {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.cap-aside-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3.2vw, 48px);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  margin: 0 0 clamp(24px, 3vw, 32px);
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+  .cap-aside-title {
+    font-size: clamp(22px, 5.8vw, 28px);
+  }
+}
+
+.cap-top-people-list {
+  border-top: 1px solid var(--rule);
+}
+
+.cap-person {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: clamp(16px, 2.5vw, 24px);
+  align-items: center;
+  padding: clamp(20px, 2.5vw, 28px) 0;
+  border-bottom: 1px solid var(--rule);
+  transition: padding-left 250ms var(--ease);
+}
+
+.cap-person:hover {
+  padding-left: 6px;
+}
+
+.cap-person-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--rule-soft);
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+
+.cap-person-name {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.cap-person-role {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+  line-height: 1.45;
+}
+
+.cap-person-email {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+/* ─── Services ─── */
+.cap-services {
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.cap-services-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 80px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0 0 clamp(48px, 6vw, 72px);
+  max-width: 22ch;
+}
+
+.cap-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.cap-service-row {
+  border-bottom: 1px solid var(--rule);
+}
+
+.cap-service-link {
+  display: block;
+  padding: clamp(24px, 3vw, 36px) 0;
+  color: var(--ink);
+  transition: padding 350ms var(--ease), color 200ms var(--ease);
+  position: relative;
+}
+
+.cap-service-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(242, 220, 75, 0.06);
+  transition: width 400ms var(--ease);
+  z-index: 0;
+}
+
+.cap-service-link:hover {
+  padding-left: 12px;
+  padding-right: 4px;
+}
+
+.cap-service-link:hover::before {
+  width: 100%;
+}
+
+.cap-service-link > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cap-service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.cap-service-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+}
+
+.cap-service-desc {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
+/* ─── Case study (navy) ─── */
+.cap-case {
+  background: var(--navy);
+  color: var(--on-dark);
+}
+
+.cap-case-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 80px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--on-dark);
+  margin: 0;
+  max-width: 22ch;
+}
+
+.cap-case-lede {
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.6;
+  color: var(--on-dark-mute);
+  margin: 0;
+  max-width: 42ch;
+}
+
+.page-capability .cap-case .lede {
+  color: var(--on-dark-mute);
+}
+
+.page-capability .cap-case .italic-serif {
+  color: var(--on-dark);
+}
+
+/* Challenge / Solution / Impact */
+.cap-case-csi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(244, 241, 232, 0.14);
+}
+
+.cap-case-csi-item {
+  --csi-marker: 2px;
+  --csi-title-pad: clamp(14px, 1.5vw, 18px);
+  padding: clamp(28px, 3.5vw, 40px) clamp(20px, 2.5vw, 32px) 0 0;
+  border-right: 1px solid rgba(244, 241, 232, 0.12);
+}
+
+.cap-case-csi-item:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+
+.cap-case-csi-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(22px, 2.2vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--on-dark);
+  margin: 0 0 clamp(14px, 1.5vw, 18px);
+  padding-left: var(--csi-title-pad);
+  border-left: var(--csi-marker) solid var(--yellow);
+}
+
+.cap-case-csi-body {
+  font-family: var(--sans);
+  font-size: clamp(15px, 1.05vw, 17px);
+  line-height: 1.6;
+  color: var(--on-dark-mute);
+  margin: 0;
+  max-width: 52ch;
+  padding-left: calc(var(--csi-marker) + var(--csi-title-pad));
+}
+
+@media (max-width: 880px) {
+  .cap-case-csi {
+    grid-template-columns: 1fr;
+  }
+
+  .cap-case-csi-item {
+    border-right: 0;
+    border-bottom: 1px solid rgba(244, 241, 232, 0.12);
+    padding: clamp(24px, 3vw, 32px) 0;
+  }
+
+  .cap-case-csi-item:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Navy → navy: match .section.tight rhythm between case study and CTA (avoid stacked full section padding) */
+.page-capability .section.cap-case {
+  padding-bottom: clamp(56px, 6vw, 90px);
+}
+
+.page-capability .section.cap-case + .section.cap-cta-mini {
+  padding-top: clamp(56px, 6vw, 90px);
+}
+
+/* ─── Mini CTA ─── */
+.cap-cta-mini {
+  background: var(--navy);
+  color: var(--on-dark);
+}
+
+.cap-cta-mini-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cap-cta-mini-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(24px, 4.25vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--on-dark);
+  margin: 0;
+  max-width: 100%;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .cap-cta-mini-title {
+    white-space: normal;
+    text-wrap: balance;
+  }
+}
+
+.cap-cta-mini-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+  .cap-cta-mini-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

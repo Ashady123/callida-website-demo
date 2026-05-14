@@ -1,0 +1,14 @@
+.DS_Store
+*.log
+.env
+.env.*
+.env.local
+
+# Vite / Node (web/)
+web/node_modules/
+web/dist/
+
+# Optional local editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
