@@ -792,6 +792,10 @@
   --cs-title-rhythm: clamp(40px, 5vw, 72px);
   padding-top: 0;
   padding-bottom: 0;
+  /* Full-bleed scroll stage: lateral padding lives on the title column (see .case-studies-pinned-head)
+     so we do not stack section gutter + inner gutter (that pushed “Our recent work” right of other headings). */
+  padding-left: 0;
+  padding-right: 0;
 }
 .case-studies-pinned-stack {
   display: flex;
@@ -807,11 +811,15 @@
   flex: 0 0 auto;
   width: 100%;
 }
-/* Full-bleed scroll stage removes section gutter; restore horizontal inset for the title block. */
+/* Same horizontal alignment as .section > .container headings (one gutter, centered max column). */
 .case-studies-pinned-head.container {
   box-sizing: border-box;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  width: min(100% - 2 * var(--gutter), var(--max));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 .case-studies-pinned-head .case-studies-head {
   flex: 1 1 280px;
